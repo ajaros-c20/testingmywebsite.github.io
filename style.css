@@ -1,0 +1,353 @@
+/* ---- Global reset & base styles ---- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Exo', sans-serif;
+    background-color: #ffffff;
+    color: #1f2933;
+    line-height: 1.6;
+}
+
+/* ---- Top bar ---- */
+.top-bar {
+    background: linear-gradient(
+        to bottom,
+        #222266 75%,
+        #ffffff 100%
+    );
+    height: 100px;
+}
+
+.top-bar-content {
+    max-width: 95%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 10px;
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+    display: flex;
+    align-items: margin-left;
+    justify-content: space-between;
+}
+
+.accessibility-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.accessibility-controls button {
+    height: 32px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accessibility-controls button:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+#text-increase,
+#text-decrease {
+    width : 32px;
+    padding: 0;
+    font-size: 1.2rem; 
+}
+
+#reset-text-size {
+    padding: 0 10px;
+    width: auto;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Logo */
+.logo img {
+    height: 36px;
+}
+
+/* Top navigation */
+
+.top-nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.top-nav a {
+    color: lightgray;
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.top-nav a:last-child {
+    margin-right: 0;
+}
+
+.top-nav a:hover {
+    opacity: 1;
+    color:white;
+}
+
+/* ---- Main page layout ---- */
+.page-layout {
+    max-width: 100%;
+    margin: 32px 0;
+    padding: 0 24px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 24px;
+    /*align-items: start;*/
+}
+
+/* ---- Main content container ---- */
+.main-container {
+    display: flex;
+    scroll-behavior: smooth;
+    flex-direction: column;
+}
+
+.content-box {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%; /* make it fill the main container */
+    box-sizing: border-box;
+    margin: 8px;
+}
+
+.content-box a{
+    text-decoration: none;
+    color: #0066aa;
+}
+
+
+.content-box h1{
+    font-size: clamp(2.5rem, 2.5vw, 4rem);
+    font-weight: 600;
+}
+
+
+:root {
+    --p-font-scale: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content-box p {
+        transition: none;
+    }
+}
+
+
+.content-box p {
+    font-size: calc(
+        clamp(0.8rem, 0.9vw, 1.5rem) * var(--p-font-scale)
+    );
+    transition: font-size 0.15s ease;
+}
+
+.content-box-main {
+    background: white;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%; /* make it fill the main container */
+    box-sizing: border-box;
+    margin: 8px;
+}
+
+
+
+.content-box-main h1{
+    font-size: clamp(3rem, 2.5vw, 4.5rem);
+    font-weight: 600;
+    color: #1cadaa;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .content-box-main p {
+        transition: none;
+    }
+}
+
+
+.content-box-main p {
+    font-size: calc(
+        clamp(0.8rem, 0.9vw, 1.5rem) * var(--p-font-scale)
+    );
+    transition: font-size 0.15s ease;
+}
+
+
+/* ---- Right side panel ---- */
+.side-panel {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    border: 3px solid #aaaaaa; /* subtle modern UI border */
+    align-self: start;
+}
+
+.side-panel h3 {
+    margin-bottom: 16px;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+}
+
+.side-panel ul {
+    list-style: none;
+}
+
+.side-panel li {
+    margin-bottom: 8px;
+}
+
+.side-panel a {
+    text-decoration: none;
+    color: #2563eb;
+    font-size: clamp(0.7rem, 2vw, 1.2rem);
+}
+
+.site-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-footer {
+    background: #222266;       
+    color: white;
+    padding: 16px 24px;
+}
+
+body[data-page="home"] .side-panel {
+    display: none;
+}
+
+
+
+body[data-page="home"] .main-container {
+    width: 100%;
+    max-width: none;
+}
+
+
+body[data-page="home"] .page-layout {
+    display: block;
+}
+
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+
+@media (orientation: portrait) {
+
+    /* Remove sidebar space */
+    .page-layout {
+        display: block;
+        padding: 0 12px;
+    }
+
+    .main-container,
+    .content-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* Show toggle button */
+    .nav-toggle {
+        display: block;
+    }
+
+    /* FULLSCREEN MOBILE MENU */
+    .top-nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 100px; /* below header */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background: #222266;
+        padding: 24px 0;
+        z-index: 9999; /* ensure it's above everything */
+        overflow-y: auto;
+        border-top: 2px solid white;
+    }
+
+    .top-nav.open {
+        display: flex;
+    }
+
+    /* Bigger, more spacious menu items */
+    .top-nav a {
+        font-size: 1.6rem;
+        padding: 18px 24px;
+        margin: 0;
+        color: white;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .top-nav a:hover {
+        background: rgba(255,255,255,0.1);
+    }
+
+    /* Keep logo + toggle aligned */
+    .top-left {
+        gap: 12px;
+    }
+
+    /* Hide sidebar entirely */
+    .side-panel {
+        display: none !important;
+    }
+}
+
