@@ -1,0 +1,28 @@
+[
+  {
+    "question": "1+1 is?",
+    "difficulty": "easy",
+    "year": 2026,
+    "topic": "number",
+    "diagram": "/assets/logo.jpg",
+    "answer": "3",
+    "explanation": "Trust me"
+  },
+  {
+    "question": "a right angle is how many degrees",
+    "difficulty": "medium",
+    "year": 2027,
+    "topic": "geometry",
+    "answer": "90 degrees",
+    "explanation": "Trust me"
+  },
+  {
+    "question": "if x = 1 then what is x",
+    "difficulty": "hard",
+    "year": 2028,
+    "topic": "algebra",
+    "diagram": "assets/plaecholder.png",
+    "answer": "x is 1",
+    "explanation": "Trust me"
+  }
+]

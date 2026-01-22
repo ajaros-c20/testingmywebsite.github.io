@@ -1,0 +1,78 @@
+<div class="content-box">
+    <div class = "scalable">
+        <h1>Preparation</h1>
+        <section id = "Top"></section>
+        <br>
+        <section id="section1">
+            <h2>What can you do to prepare?</h2>
+            <p>On this page you will find an archive of questions that have come up in previous challenges. The question bank allows you to filter by difficulty (easy, medium, hard), as well as which challenge they came from, which topic they classify as. On top of this, below the question bank you can find the full past papers, available as a downloadable PDF file.</p>
+        </section>
+        <br>
+        <section id="section2">
+            <h2>Question Bank</h2>
+            <!-- ADD QUESTOIN BANK HERE -->
+            <div class="question-bank-container">
+
+                <div class="filters">
+                    <select id="difficultyFilter">
+                        <option value="">All Difficulties</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+
+                    <select id="yearFilter">
+                        <option value="">All Years</option>
+                    </select>
+
+                    <select id="topicFilter">
+                        <option value="">All Topics</option>
+                    </select>
+
+                    <select id="resultsPerPage">
+                        <option value="10">Show 10</option>
+                        <option value="20">Show 20</option>
+                        <option value="50">Show 50</option>
+                        <option value="100">Show 100</option>
+                    </select>
+                </div>
+
+                <div id="resultsCount"></div>
+
+                <div id="questionList"></div>
+            </div>
+
+<!-- Modal -->
+<div id="modalOverlay" class="modal-overlay hidden"></div>
+
+<div id="questionModal" class="modal hidden">
+  <div class="modal-content">
+    <button class="modal-close">×</button>
+    <h2 id="modalQuestion"></h2>
+
+    <div class="modal-section"><strong>Difficulty:</strong> <span id="modalDifficulty"></span></div>
+    <div class="modal-section"><strong>Topic:</strong> <span id="modalTopic"></span></div>
+    <div class="modal-section"><strong>Year:</strong> <span id="modalYear"></span></div>
+
+    <div id="modalDiagramContainer" class="modal-section hidden"> <strong>Diagram:</strong><br> <img id="modalDiagram" src="" alt="Diagram"> </div>
+
+
+    <button id="revealAnswerBtn" class="reveal-btn">Reveal Answer</button>
+
+    <div id="modalAnswerContainer" class="hidden">
+      <div class="modal-section"><strong>Answer:</strong> <span id="modalAnswer"></span></div>
+      <div class="modal-section"><strong>Explanation:</strong> <span id="modalExplanation"></span></div>
+  </div>
+</div>
+</div>
+
+
+
+</section>
+<br>
+<section id="section3">
+    <h2>Past Papers</h2>
+</section>
+<br>
+</div>
+</div>
