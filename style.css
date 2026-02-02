@@ -335,6 +335,11 @@ body[data-page="home"] .page-layout {
     display: none;
 }
 
+.hidden {
+    display: none !important;
+}
+
+
 .modal-content {
     background: white;
     padding: 25px;
@@ -460,3 +465,4 @@ body[data-page="home"] .page-layout {
         display: none !important;
     }
 }
+
