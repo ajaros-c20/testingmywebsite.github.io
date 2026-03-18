@@ -62,8 +62,8 @@ document.querySelectorAll(".expand-btn").forEach(btn => {
 }
 
 function openModal(q) {
-  document.getElementById("modalQuestion").textContent = q.question;
-  document.getElementById("modalDifficulty").textContent = q.difficulty;
+  document.getElementById("modalQuestion").innerHTML = q.question;
+  document.getElementById("modalDifficulty").innerHTML = q.difficulty;
   document.getElementById("modalTopic").textContent = q.topic;
   document.getElementById("modalYear").textContent = q.year;
 
@@ -99,8 +99,8 @@ document.getElementById("modalAnswerContainer").classList.add("hidden");
 document.getElementById("revealAnswerBtn").classList.remove("hidden");
 
   // Set answer/explanation
-document.getElementById("modalAnswer").textContent = q.answer || "No answer provided";
-document.getElementById("modalExplanation").textContent = q.explanation || "No explanation provided";
+document.getElementById("modalAnswer").innerHTML = q.answer || "No answer provided";
+document.getElementById("modalExplanation").innerHTML = q.explanation || "No explanation provided";
 
 document.getElementById("questionModal").classList.remove("hidden");
 document.getElementById("modalOverlay").classList.remove("hidden");
