@@ -1,28 +1,38 @@
 [
   {
-    "question": "1+1 is?",
-    "difficulty": "easy",
+    "question": "Given that 5<sup>a</sup> + 5<sup>a</sup> + 5<sup>a</sup> + 5<sup>a</sup> = 500, what is the value of a<sup>5</sup>?",
+    "difficulty": "hard",
     "year": 2026,
-    "topic": "number",
-    "diagram": "/assets/logo.jpg",
-    "answer": "3",
-    "explanation": "Trust me"
+    "topic": "Algebra",
+    "diagram": "/assets/sampleq1.png",
+    "answer": "(D) 243",
+    "explanation": "4*5<sup>a</sup> = 500 therefore 5<sup>a</sup> = 125 so a = 3 hence 3<sup>5</sup> = 243"
   },
   {
-    "question": "a right angle is how many degrees",
+    "question": "A 4 digit number has no repeated digits. The tens digit is exactly twice the thousands digit. The hundreds digit is 5 less than the tens digit. The sum of all the digits is 21. What is the ones digit?",
     "difficulty": "medium",
-    "year": 2027,
-    "topic": "geometry",
+    "year": 2026,
+    "topic": "Number",
+    "diagram": "/assets/sampleq2.png",
     "answer": "90 degrees",
     "explanation": "Trust me"
   },
   {
-    "question": "if x = 1 then what is x",
-    "difficulty": "hard",
-    "year": 2028,
-    "topic": "algebra",
-    "diagram": "assets/plaecholder.png",
-    "answer": "x is 1",
-    "explanation": "Trust me"
+    "question": "What is the sum of the finite area enclosed between the graphs of |x| + |y| = 1 and |x| - |y| = <sup>1</sup>/<sub>2</sub>?",
+    "difficulty": "very hard",
+    "year": 2026,
+    "topic": "Geometry",
+    "diagram": "assets/sampleq3.png",
+    "answer": "<sup>1</sup>/<sub>4</sub>",
+    "explanation": "<p><strong>Solution:</strong></p><p>The curve <code>|x| + |y| = 1</code> is a diamond-shaped region. The curve <code>|x| - |y| = 1/2</code> consists of four straight lines that cut across the diamond, creating four identical small triangles.</p><p>In the first quadrant, the relevant lines are:</p><p><code>x + y = 1</code> (the edge of the diamond)</p><p><code>x - y = 1/2</code></p><p>These intersect at <code>(3/4, 1/4)</code>. The line <code>x - y = 1/2</code> meets the x-axis at <code>(1/2, 0)</code>, and the diamond meets the x-axis at <code>(1, 0)</code>. These three points form a triangle.</p><p>The base of the triangle is <code>1/2</code> and the height is <code>1/4</code>, so its area is:</p><p><code>(1/2) × (1/2) × (1/4) = 1/16</code></p><p>There are four such triangles, so the total enclosed area is:</p><p><strong>1/4</strong></p>"
+  },
+  {
+    "question": "Paul has 3 cups of water. The cups contain 200ml, 400ml and 650ml of water. Paul drinks all the water in the cup which contains the least water. How many litres of water are left?",
+    "difficulty": "very easy",
+    "year": 2026,
+    "topic": "Number",
+    "diagram": "/assets/sampleq4.png",
+    "answer": "(B) 1.05",
+    "explanation": "He drinks 200 ml, leaving 400 ml + 650 ml = 1050 ml = 1.05 L."
   }
 ]
