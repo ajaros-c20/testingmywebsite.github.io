@@ -78,21 +78,22 @@ function openModal(q) {
   revealBtn.onclick = () => {
     answerContainer.classList.remove("hidden");
     revealBtn.classList.add("hidden");
-};
+    };
 
 
-  // Diagram
+// Diagram
 const diagramContainer = document.getElementById("modalDiagramContainer");
 const diagramImg = document.getElementById("modalDiagram");
 
 if (q.diagram && q.diagram.trim() !== "") {
-    diagramImg.src = q.diagram;
+    diagramImg.setAttribute("data-src", q.diagram);
+    diagramImg.removeAttribute("src");
     diagramContainer.classList.remove("hidden");
 } else {
-    diagramImg.src = "";
+    diagramImg.removeAttribute("src");
+    diagramImg.removeAttribute("data-src");
     diagramContainer.classList.add("hidden");
 }
-
 
   // Hide answer initially
 document.getElementById("modalAnswerContainer").classList.add("hidden");
@@ -105,6 +106,9 @@ document.getElementById("modalExplanation").innerHTML = q.explanation || "No exp
 document.getElementById("questionModal").classList.remove("hidden");
 document.getElementById("modalOverlay").classList.remove("hidden");
 document.body.classList.add("dimmed");
+if (window.initImageLoader) {
+    window.initImageLoader();
+}
 
 }
 
@@ -114,6 +118,9 @@ function closeModal() {
 
     document.getElementById("questionModal").classList.add("hidden");
     document.body.classList.remove("dimmed");
+    if (window.initImageLoader) {
+    window.initImageLoader();
+    }
 }
 
 function initQuestionBank() {

@@ -41,6 +41,10 @@ function loadPage(page) {
             document.body.classList.remove("dimmed");
             mainContent.innerHTML = html;
 
+            if (window.initImageLoader) {
+                window.initImageLoader();
+            }
+
             buildSidebar(); // build sidebar for this page
             animateContent();
 
