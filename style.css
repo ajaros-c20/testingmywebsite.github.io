@@ -16,6 +16,9 @@ body {
     line-height: 1.6;
 }
 
+.privacy a {
+    text-decoration: none;
+}
 .image-popup {
   position: fixed;
   top: 0;
@@ -244,7 +247,14 @@ body {
     background: #222266;
     color: white;
     padding: 16px 24px;
+
 }
+
+.site-footer a {
+    color: yellow;           /* make links white */
+    text-decoration: none;  /* remove underline */
+}
+
 
 /* ---- Home page overrides ---- */
 body[data-page="home"] .side-panel,
